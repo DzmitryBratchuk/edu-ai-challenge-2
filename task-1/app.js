@@ -197,6 +197,9 @@ if (typeof document !== "undefined") {
 
   function initListToggle() {
     document.getElementById("list").addEventListener("click", function (e) {
+      // Don't toggle if the user just finished selecting text
+      if (window.getSelection && window.getSelection().toString()) return;
+
       const row = e.target.closest(".list-row");
       if (!row) return;
 
