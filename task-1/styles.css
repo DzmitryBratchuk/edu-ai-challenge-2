@@ -1,17 +1,21 @@
 /* ── Variables ──────────────────────────────────────────────────────────── */
 :root {
-  --gold:     #f5c518;
-  --silver:   #a8a9ad;
-  --bronze:   #cd7f32;
-  --bg:       #f0f2f5;
-  --white:    #ffffff;
-  --blue:     #1877f2;
-  --blue-sub: #4a90d9;
-  --text:     #1a1a2e;
-  --muted:    #888;
-  --border:   #e5e7eb;
-  --shadow:   0 1px 4px rgba(0, 0, 0, 0.08);
-  --radius:   8px;
+  --gold:       #f5c518;
+  --silver:     #a8a9ad;
+  --bronze:     #cd7f32;
+  --bg:         #f0f2f5;
+  --white:      #ffffff;
+  --blue:       #1877f2;
+  --blue-sub:   #4a90d9;
+  --text:       #1a1a2e;
+  --muted:      #888;
+  --border:     #e5e7eb;
+  --shadow:     0 1px 4px rgba(0, 0, 0, 0.08);
+  --radius:     8px;
+  --avatar-bg:  #dde1e7;
+  --cat-edu-bg: #dbeafe;
+  --cat-lab-bg: #fff3cd;
+  --cat-uni-bg: #d1fae5;
 }
 
 /* ── Reset ──────────────────────────────────────────────────────────────── */
@@ -121,7 +125,6 @@ body {
   align-items: flex-end;
   gap: 1rem;
   margin-bottom: 2rem;
-  padding-bottom: 0;
 }
 
 .podium-slot {
@@ -140,7 +143,7 @@ body {
   width: 72px;
   height: 72px;
   border-radius: 50%;
-  background: #dde1e7;
+  background: var(--avatar-bg);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -259,7 +262,7 @@ body {
   width: 42px;
   height: 42px;
   border-radius: 50%;
-  background: #dde1e7;
+  background: var(--avatar-bg);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -305,9 +308,9 @@ body {
 
 .cat-pill span:first-child { font-size: 0.9rem; }
 
-.cat-edu { background: #dbeafe; }
-.cat-lab { background: #fff3cd; }
-.cat-uni { background: #d1fae5; }
+.cat-edu { background: var(--cat-edu-bg); }
+.cat-lab { background: var(--cat-lab-bg); }
+.cat-uni { background: var(--cat-uni-bg); }
 
 .list-total {
   display: flex;
@@ -344,7 +347,7 @@ body {
   align-items: center;
   justify-content: center;
   color: var(--muted);
-  transition: background 0.15s;
+  transition: background 0.15s ease;
   flex-shrink: 0;
 }
 
@@ -440,7 +443,7 @@ body {
   .main-content { padding: 1rem; }
 
   .podium-slot { width: 100px; }
-  .podium-avatar { width: 52px !important; height: 52px !important; font-size: 1.6rem !important; }
+  .podium-slot .podium-avatar { width: 52px; height: 52px; font-size: 1.6rem; }
   .podium-platform-num { font-size: 2.2rem; }
   .podium-name { font-size: 0.75rem; }
   .podium-info { font-size: 0.65rem; }
