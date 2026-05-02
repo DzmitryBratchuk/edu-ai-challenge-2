@@ -442,11 +442,25 @@ body {
 
   .main-content { padding: 1rem; }
 
-  .podium-slot { width: 100px; }
-  .podium-slot .podium-avatar { width: 52px; height: 52px; font-size: 1.6rem; }
-  .podium-platform-num { font-size: 2.2rem; }
-  .podium-name { font-size: 0.75rem; }
-  .podium-info { font-size: 0.65rem; }
+  /* Stack podium slots vertically: rank 1 → rank 2 → rank 3 */
+  .podium-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+  }
+
+  .podium-slot { width: 100%; max-width: 360px; }
+
+  /* SLOT_RANKS = [rank2, rank1, rank3] → reorder to rank1, rank2, rank3 */
+  .podium-slot:nth-child(1) { order: 2; }
+  .podium-slot:nth-child(2) { order: 1; }
+  .podium-slot:nth-child(3) { order: 3; }
+
+  /* Platform height makes no visual sense when stacked */
+  .podium-platform { display: none; }
+
+  /* Equalise avatar size — no need for centre to be bigger when stacked */
+  .podium-slot--center .podium-avatar { width: 72px; height: 72px; font-size: 2.2rem; }
 
   .list-name, .list-sub {
     overflow: hidden;
