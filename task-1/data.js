@@ -85,8 +85,8 @@ const EMPLOYEES = [
     ]
   },
   {
-    id: 8, name: "Wally Walrus", title: "Senior Tusk Analyst",
-    department: "Arctic Team", avatar: "🐋",
+    id: 8, name: "Wally Whale", title: "Senior Tusk Analyst",
+    department: "Arctic Team", avatar: "🐳",
     activities: [
       { id: 37, name: "[LAB] Tusk Tech Conference",         category: "Public Speaking",       date: "2025-06-04", points: 64 },
       { id: 38, name: "[EDU] Arctic Survival Masterclass",  category: "Education",             date: "2024-10-16", points: 32 },
