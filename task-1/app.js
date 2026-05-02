@@ -63,7 +63,7 @@ if (typeof document !== "undefined") {
 
   function formatDate(dateStr) {
     const d = new Date(dateStr);
-    return `${String(d.getDate()).padStart(2,"0")}-${MONTHS[d.getMonth()]}-${d.getFullYear()}`;
+    return `${String(d.getUTCDate()).padStart(2,"0")}-${MONTHS[d.getUTCMonth()]}-${d.getUTCFullYear()}`;
   }
 
   const CATEGORY_META = {
