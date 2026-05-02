@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Leaderboard</title>
+  <meta name="description" content="Animal-kingdom leaderboard — top performers by contributions and activity." />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
@@ -50,8 +51,8 @@
   </div>
 
   <main class="main-content">
-    <div id="podium"></div>
-    <div id="list"></div>
+    <div id="podium" aria-live="polite" aria-label="Podium — top 3 performers"></div>
+    <div id="list" aria-live="polite" aria-label="Ranked list"></div>
   </main>
 
   <script src="data.js"></script>
