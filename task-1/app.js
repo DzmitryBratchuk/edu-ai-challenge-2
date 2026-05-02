@@ -2,9 +2,10 @@
 
 /**
  * Returns "Q1"–"Q4" for a given ISO date string "YYYY-MM-DD".
+ * Parses the month directly from the string to avoid timezone skew.
  */
 function getQuarter(dateStr) {
-  const month = new Date(dateStr).getMonth() + 1; // 1–12
+  const month = parseInt(dateStr.slice(5, 7), 10); // "YYYY-MM-DD" → month 1–12
   if (month <= 3)  return "Q1";
   if (month <= 6)  return "Q2";
   if (month <= 9)  return "Q3";
