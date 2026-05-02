@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Leaderboard</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <header class="page-header">
+    <h1>Leaderboard</h1>
+    <p>Top performers based on contributions and activity</p>
+  </header>
+
+  <div class="filter-bar">
+    <select id="year-filter" aria-label="Filter by year">
+      <option value="all">All Years</option>
+      <option value="2023">2023</option>
+      <option value="2024">2024</option>
+      <option value="2025">2025</option>
+    </select>
+
+    <select id="quarter-filter" aria-label="Filter by quarter">
+      <option value="all">All Quarters</option>
+      <option value="Q1">Q1</option>
+      <option value="Q2">Q2</option>
+      <option value="Q3">Q3</option>
+      <option value="Q4">Q4</option>
+    </select>
+
+    <select id="category-filter" aria-label="Filter by category">
+      <option value="all">All Categories</option>
+      <option value="Education">Education</option>
+      <option value="Public Speaking">Public Speaking</option>
+      <option value="University Partnership">University Partnership</option>
+    </select>
+
+    <div class="search-wrapper">
+      <span class="search-icon" aria-hidden="true">🔍</span>
+      <input
+        id="search-input"
+        type="text"
+        placeholder="Search employee..."
+        aria-label="Search employee"
+        autocomplete="off"
+      />
+      <button id="search-clear" hidden aria-label="Clear search">✕</button>
+    </div>
+  </div>
+
+  <main class="main-content">
+    <div id="podium"></div>
+    <div id="list"></div>
+  </main>
+
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
