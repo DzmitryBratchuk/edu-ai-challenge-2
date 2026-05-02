@@ -1,3 +1,7 @@
+// ── data.js — static employee dataset for the leaderboard app ─────────────
+// Activity name prefixes: [EDU] = "Education" | [LAB] = "Public Speaking"
+//                         [UNI] = "University Partnership"
+
 const EMPLOYEES = [
   // ── Savanna Division ──────────────────────────────────────────────────────
   {
